@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>
+            Tomato Prediction
+        </title>
+    </head>
+    <body>
+        <div class="hero">
+            <h1 class="herotext">Tomato prediction</h1>
+        </div>
+        <br>
+
+        <div class="contents">
+            <form name="input" method="POST">
+                <center>
+                    <label>Upload the image of the tomato farm:</label> <br>
+                    <input type="file" accept="image/*" name="userFile"><br>
+                    <input type="submit">
+
+                </center>
+            </form>
+            <br>
+            <br>
+            {% if processed != 'no' %}
+            <p>Uploaded image:</p><br>
+            <img src="{{uploaded}}">
+            <br>
+            <p>Result image:</p><br>
+            <img src="{{result}}">
+            {% endif %}
+        </div>
+
+    </body>
+</html>
